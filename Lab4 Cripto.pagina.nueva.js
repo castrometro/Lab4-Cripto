@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Descifrador 1
+// @name         Descifrador 2
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Laboratorio 4 Criptografía UDP 2023-2
 // @author       Pablo Castro
-// @match        https://cripto.tiiny.site/
+// @match        https://lab4cryptopablocastro.tiiny.site/
 // @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js#sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==
 // @grant        none
 // ==/UserScript==

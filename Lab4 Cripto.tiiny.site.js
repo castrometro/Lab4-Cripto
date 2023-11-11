@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Descifrador de Contraseña y Mensajes Cifrados
+// @name         Descifrador 1
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Extrae y muestra la contraseña del texto de una página web y descifra mensajes cifrados.
-// @author       TuNombre
+// @description  Laboratorio 4 Criptografía UDP 2023-2
+// @author       Pablo Castro
 // @match        https://cripto.tiiny.site/
 // @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js#sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==
 // @grant        none
@@ -46,8 +46,7 @@
     //Parte 3.1
     // Función para descifrar un mensaje con 3DES
     function descifrarMensaje3DES(mensajeCifradoBase64, clave) {
-        let claveAjustada = clave.padEnd(24, clave);
-        let claveHex = CryptoJS.enc.Utf8.parse(claveAjustada);
+        let claveHex = CryptoJS.enc.Utf8.parse(clave);
         let mensajeDescifrado = CryptoJS.TripleDES.decrypt({
             ciphertext: CryptoJS.enc.Base64.parse(mensajeCifradoBase64)
         }, claveHex, {
@@ -83,3 +82,4 @@
         descifrarTodosLosMensajes();
     });
 })();
+
